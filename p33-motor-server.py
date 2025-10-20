@@ -1,3 +1,14 @@
+"""
+ex json command
+{
+  "motor1": {"action": "run", "speed": 0.6},
+  "motor2": {"action": "run", "speed": -0.4}
+}
+
+pip install adafruit-circuitpython-motorkit on a Raspberry Pi or similar with Adafruit Motor HAT
+
+"""
+
 import socket
 import json
 import logging

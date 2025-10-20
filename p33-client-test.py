@@ -1,3 +1,21 @@
+"""
+Connects to the motor server via TCP.
+Reads joystick axis input using evdev.
+Sends JSON commands with action: "run" and speed from -1.0 to 1.0.
+Handles connection errors and automatically reconnects.
+Prints acknowledgment from the server.
+
+pip install evdev
+
+Common Xbox Axis Mappings (evdev):
+
+Axis Name      evdev Code    Typical Use
+============================================
+Left Stick     YABS_Y        Forward/backward
+Right Stick    YABS_RY       Second motor or alternate control
+
+"""
+
 import socket
 import json
 import time
